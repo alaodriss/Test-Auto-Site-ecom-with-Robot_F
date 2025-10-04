@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-10-04T16:15:14.790127" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\allod\Desktop\Test site e-com\Test.robot">
+<test id="s1-t1" name="Inscription d'un nouvel utilisateur" line="11">
+<kw name="Open Chrome Browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:15.278935" level="INFO">Opening browser 'Chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
+<arg>url=https://tutorialsninja.com/demo</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-04T16:15:15.278632" elapsed="9.042711"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-04T16:15:24.322068" elapsed="0.043388"/>
+</kw>
+<doc>Ouvre le site dans le navigateur Chrome</doc>
+<status status="PASS" start="2025-10-04T16:15:15.277989" elapsed="9.087707"/>
+</kw>
+<kw name="Given L'utilisateur est sur la page d'inscription">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:24.367534" level="INFO">Clicking element 'xpath=//span[text()='My Account']'.</msg>
+<arg>xpath=//span[text()='My Account']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:24.366953" elapsed="0.151905"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-04T16:15:29.520558" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-04T16:15:24.519714" elapsed="5.001226"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:29.522131" level="INFO">Clicking element 'xpath=//a[text()='Register']'.</msg>
+<arg>xpath=//a[text()='Register']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:29.521487" elapsed="2.425921"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>locator=//*[@id="content"]/h1</arg>
+<arg>timeout=5s</arg>
+<arg>error=None</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-04T16:15:31.947754" elapsed="0.020791"/>
+</kw>
+<doc>aller vers la page d'inscription</doc>
+<status status="PASS" start="2025-10-04T16:15:24.366482" elapsed="7.602419"/>
+</kw>
+<kw name="When il remplit tous les champs du formulaire">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-04T16:15:31.971205" level="INFO">${random_string} = sLYLP</msg>
+<var>${random_string}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-04T16:15:31.970599" elapsed="0.000717"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-10-04T16:15:31.972312" level="INFO">${email} = user_sLYLP@example.com</msg>
+<var>${email}</var>
+<arg>SEPARATOR=</arg>
+<arg>user_</arg>
+<arg>${random_string}</arg>
+<arg>@example.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-10-04T16:15:31.971754" elapsed="0.000649"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:31.973300" level="INFO">Typing text 'John' into text field '//input[@id="input-firstname"]'.</msg>
+<arg>locator=//input[@id="input-firstname"]</arg>
+<arg>text=John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:31.972759" elapsed="0.268206"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:32.241991" level="INFO">Typing text 'Doe' into text field 'id=input-lastname'.</msg>
+<arg>id=input-lastname</arg>
+<arg>Doe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:32.241395" elapsed="0.168040"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:32.410665" level="INFO">Typing text 'user_sLYLP@example.com' into text field 'id=input-email'.</msg>
+<arg>id=input-email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:32.409979" elapsed="0.201779"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:32.613172" level="INFO">Typing text '1234567890' into text field 'id=input-telephone'.</msg>
+<arg>id=input-telephone</arg>
+<arg>1234567890</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:32.612235" elapsed="0.239691"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:32.853282" level="INFO">Typing text 'Password123' into text field 'id=input-password'.</msg>
+<arg>id=input-password</arg>
+<arg>Password123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:32.852460" elapsed="0.197037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:33.050353" level="INFO">Typing text 'Password123' into text field 'id=input-confirm'.</msg>
+<arg>id=input-confirm</arg>
+<arg>Password123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:33.049806" elapsed="0.164791"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:33.215455" level="INFO">Clicking element 'xpath=//input[@name='agree']'.</msg>
+<arg>xpath=//input[@name='agree']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:33.214985" elapsed="0.146688"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-04T16:15:38.363224" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-04T16:15:33.362133" elapsed="5.001324"/>
+</kw>
+<doc>remplir le formulaire d'inscription</doc>
+<status status="PASS" start="2025-10-04T16:15:31.970010" elapsed="6.393638"/>
+</kw>
+<kw name="And il clique sur le bouton &quot;continuer&quot;">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:38.366155" level="INFO">Clicking button 'xpath=//input[@value='Continue']'.</msg>
+<arg>xpath=//input[@value='Continue']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-04T16:15:38.365822" elapsed="1.458428"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-04T16:15:44.826004" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-04T16:15:39.824766" elapsed="5.001565"/>
+</kw>
+<doc>cliquer sur le bouton continuer</doc>
+<status status="PASS" start="2025-10-04T16:15:38.365317" elapsed="6.461331"/>
+</kw>
+<kw name="Then le compte de l'utilisateur est créé avec succès">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:44.842132" level="INFO">${Url_register_succes} = https://tutorialsninja.com/demo/index.php?route=account/success</msg>
+<var>${Url_register_succes}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-10-04T16:15:44.828529" elapsed="0.013717"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Url_register_succes}</arg>
+<arg>success</arg>
+<arg>Le compte n'a pas été créé avec succès</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-04T16:15:44.842643" elapsed="0.000588"/>
+</kw>
+<status status="PASS" start="2025-10-04T16:15:44.827583" elapsed="0.015860"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-04T16:15:45.022387" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>selenium-screenshot-{index}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-04T16:15:44.845510" elapsed="0.177217"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-04T16:15:45.023280" elapsed="3.354124"/>
+</kw>
+<doc>Ferme le navigateur</doc>
+<status status="PASS" start="2025-10-04T16:15:44.844743" elapsed="3.533037"/>
+</kw>
+<doc>Test d'inscription d'un nouvel utilisateur</doc>
+<status status="PASS" start="2025-10-04T16:15:15.277072" elapsed="33.102508"/>
+</test>
+<status status="PASS" start="2025-10-04T16:15:14.792416" elapsed="33.589790"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-04T16:15:15.275419" level="ERROR">Error in file 'C:\Users\allod\Desktop\Test site e-com\Test.robot' on line 4: Resource file '\\chemin-fihcier' does not exist.</msg>
+</errors>
+</robot>
