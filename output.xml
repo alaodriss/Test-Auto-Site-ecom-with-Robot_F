@@ -1,189 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-10-04T16:15:14.790127" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="C:\Users\allod\Desktop\Test site e-com\Test.robot">
-<test id="s1-t1" name="Inscription d'un nouvel utilisateur" line="11">
-<kw name="Open Chrome Browser" type="SETUP">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-10-05T15:14:07.590435" rpa="false" schemaversion="5">
+<suite id="s1" name="Test site e-com" source="C:\Users\allod\Desktop\Test site e-com">
+<suite id="s1-s1" name="Tests" source="C:\Users\allod\Desktop\Test site e-com\Tests">
+<suite id="s1-s1-s1" name="User story 1" source="C:\Users\allod\Desktop\Test site e-com\Tests\User_story_1.robot">
+<test id="s1-s1-s1-t1" name="Inscription d'un nouvel utilisateur" line="16">
+<kw name="Open Chrome Browser" owner="Setup_Teardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:15.278935" level="INFO">Opening browser 'Chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
-<arg>url=https://tutorialsninja.com/demo</arg>
+<msg time="2025-10-05T15:14:08.074609" level="INFO">Opening browser 'Chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
+<arg>url=${Url}</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-04T16:15:15.278632" elapsed="9.042711"/>
+<status status="PASS" start="2025-10-05T15:14:08.074235" elapsed="7.067225"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-04T16:15:24.322068" elapsed="0.043388"/>
+<status status="PASS" start="2025-10-05T15:14:15.141938" elapsed="0.103119"/>
 </kw>
 <doc>Ouvre le site dans le navigateur Chrome</doc>
-<status status="PASS" start="2025-10-04T16:15:15.277989" elapsed="9.087707"/>
+<status status="PASS" start="2025-10-05T15:14:08.073581" elapsed="7.171648"/>
 </kw>
 <kw name="Given L'utilisateur est sur la page d'inscription">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:24.367534" level="INFO">Clicking element 'xpath=//span[text()='My Account']'.</msg>
+<msg time="2025-10-05T15:14:15.247707" level="INFO">Clicking element 'xpath=//span[text()='My Account']'.</msg>
 <arg>xpath=//span[text()='My Account']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:24.366953" elapsed="0.151905"/>
+<status status="PASS" start="2025-10-05T15:14:15.247006" elapsed="0.135669"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-04T16:15:29.520558" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T15:14:20.383819" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-04T16:15:24.519714" elapsed="5.001226"/>
+<status status="PASS" start="2025-10-05T15:14:15.383171" elapsed="5.000890"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:29.522131" level="INFO">Clicking element 'xpath=//a[text()='Register']'.</msg>
+<msg time="2025-10-05T15:14:20.384848" level="INFO">Clicking element 'xpath=//a[text()='Register']'.</msg>
 <arg>xpath=//a[text()='Register']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:29.521487" elapsed="2.425921"/>
+<status status="PASS" start="2025-10-05T15:14:20.384429" elapsed="4.417727"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>locator=//*[@id="content"]/h1</arg>
 <arg>timeout=5s</arg>
 <arg>error=None</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-04T16:15:31.947754" elapsed="0.020791"/>
+<status status="PASS" start="2025-10-05T15:14:24.802430" elapsed="0.032182"/>
 </kw>
 <doc>aller vers la page d'inscription</doc>
-<status status="PASS" start="2025-10-04T16:15:24.366482" elapsed="7.602419"/>
+<status status="PASS" start="2025-10-05T15:14:15.246241" elapsed="9.588580"/>
 </kw>
 <kw name="When il remplit tous les champs du formulaire">
+<kw name="Saisir formulaire d'inscription" owner="Register">
 <kw name="Generate Random String" owner="String">
-<msg time="2025-10-04T16:15:31.971205" level="INFO">${random_string} = sLYLP</msg>
+<msg time="2025-10-05T15:14:24.837091" level="INFO">${random_string} = gajAs</msg>
 <var>${random_string}</var>
 <arg>5</arg>
 <arg>[LETTERS]</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2025-10-04T16:15:31.970599" elapsed="0.000717"/>
+<status status="PASS" start="2025-10-05T15:14:24.836641" elapsed="0.000503"/>
 </kw>
 <kw name="Catenate" owner="BuiltIn">
-<msg time="2025-10-04T16:15:31.972312" level="INFO">${email} = user_sLYLP@example.com</msg>
+<msg time="2025-10-05T15:14:24.837716" level="INFO">${email} = user_gajAs@example.com</msg>
 <var>${email}</var>
 <arg>SEPARATOR=</arg>
 <arg>user_</arg>
 <arg>${random_string}</arg>
 <arg>@example.com</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2025-10-04T16:15:31.971754" elapsed="0.000649"/>
+<status status="PASS" start="2025-10-05T15:14:24.837320" elapsed="0.000444"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:31.973300" level="INFO">Typing text 'John' into text field '//input[@id="input-firstname"]'.</msg>
-<arg>locator=//input[@id="input-firstname"]</arg>
-<arg>text=John</arg>
+<msg time="2025-10-05T15:14:24.838349" level="INFO">Typing text 'John' into text field '//input[@id="input-firstname"]'.</msg>
+<arg>locator=${xpath_firstname}</arg>
+<arg>text=${firstname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:31.972759" elapsed="0.268206"/>
+<status status="PASS" start="2025-10-05T15:14:24.837964" elapsed="0.245915"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:32.241991" level="INFO">Typing text 'Doe' into text field 'id=input-lastname'.</msg>
+<msg time="2025-10-05T15:14:25.084852" level="INFO">Typing text 'Doe' into text field 'id=input-lastname'.</msg>
 <arg>id=input-lastname</arg>
-<arg>Doe</arg>
+<arg>${lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:32.241395" elapsed="0.168040"/>
+<status status="PASS" start="2025-10-05T15:14:25.084307" elapsed="0.178533"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:32.410665" level="INFO">Typing text 'user_sLYLP@example.com' into text field 'id=input-email'.</msg>
+<msg time="2025-10-05T15:14:25.263376" level="INFO">Typing text 'user_gajAs@example.com' into text field 'id=input-email'.</msg>
 <arg>id=input-email</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:32.409979" elapsed="0.201779"/>
+<status status="PASS" start="2025-10-05T15:14:25.263076" elapsed="0.174048"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:32.613172" level="INFO">Typing text '1234567890' into text field 'id=input-telephone'.</msg>
+<msg time="2025-10-05T15:14:25.437668" level="INFO">Typing text '1234567890' into text field 'id=input-telephone'.</msg>
 <arg>id=input-telephone</arg>
-<arg>1234567890</arg>
+<arg>${telephone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:32.612235" elapsed="0.239691"/>
+<status status="PASS" start="2025-10-05T15:14:25.437363" elapsed="0.106969"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:32.853282" level="INFO">Typing text 'Password123' into text field 'id=input-password'.</msg>
+<msg time="2025-10-05T15:14:25.544855" level="INFO">Typing text 'Password123' into text field 'id=input-password'.</msg>
 <arg>id=input-password</arg>
-<arg>Password123</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:32.852460" elapsed="0.197037"/>
+<status status="PASS" start="2025-10-05T15:14:25.544562" elapsed="0.112361"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:33.050353" level="INFO">Typing text 'Password123' into text field 'id=input-confirm'.</msg>
+<msg time="2025-10-05T15:14:25.657671" level="INFO">Typing text 'Password123' into text field 'id=input-confirm'.</msg>
 <arg>id=input-confirm</arg>
-<arg>Password123</arg>
+<arg>${confirm}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:33.049806" elapsed="0.164791"/>
+<status status="PASS" start="2025-10-05T15:14:25.657236" elapsed="0.132451"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:33.215455" level="INFO">Clicking element 'xpath=//input[@name='agree']'.</msg>
+<msg time="2025-10-05T15:14:25.790174" level="INFO">Clicking element 'xpath=//input[@name='agree']'.</msg>
 <arg>xpath=//input[@name='agree']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:33.214985" elapsed="0.146688"/>
+<status status="PASS" start="2025-10-05T15:14:25.789920" elapsed="0.151317"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-04T16:15:38.363224" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T15:14:30.942752" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-04T16:15:33.362133" elapsed="5.001324"/>
+<status status="PASS" start="2025-10-05T15:14:25.941465" elapsed="5.001527"/>
 </kw>
+<arg>John</arg>
+<arg>Doe</arg>
+<arg>1234567890</arg>
+<arg>Password123</arg>
+<arg>Password123</arg>
 <doc>remplir le formulaire d'inscription</doc>
-<status status="PASS" start="2025-10-04T16:15:31.970010" elapsed="6.393638"/>
+<status status="PASS" start="2025-10-05T15:14:24.836207" elapsed="6.106962"/>
+</kw>
+<status status="PASS" start="2025-10-05T15:14:24.835684" elapsed="6.107905"/>
 </kw>
 <kw name="And il clique sur le bouton &quot;continuer&quot;">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:38.366155" level="INFO">Clicking button 'xpath=//input[@value='Continue']'.</msg>
+<msg time="2025-10-05T15:14:30.945480" level="INFO">Clicking button 'xpath=//input[@value='Continue']'.</msg>
 <arg>xpath=//input[@value='Continue']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-04T16:15:38.365822" elapsed="1.458428"/>
+<status status="PASS" start="2025-10-05T15:14:30.945016" elapsed="0.248786"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-04T16:15:44.826004" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T15:14:36.195309" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-04T16:15:39.824766" elapsed="5.001565"/>
+<status status="PASS" start="2025-10-05T15:14:31.194121" elapsed="5.001426"/>
 </kw>
 <doc>cliquer sur le bouton continuer</doc>
-<status status="PASS" start="2025-10-04T16:15:38.365317" elapsed="6.461331"/>
+<status status="PASS" start="2025-10-05T15:14:30.944390" elapsed="5.251501"/>
 </kw>
 <kw name="Then le compte de l'utilisateur est créé avec succès">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:44.842132" level="INFO">${Url_register_succes} = https://tutorialsninja.com/demo/index.php?route=account/success</msg>
+<msg time="2025-10-05T15:14:36.213217" level="INFO">${Url_register_succes} = https://tutorialsninja.com/demo/index.php?route=account/success</msg>
 <var>${Url_register_succes}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2025-10-04T16:15:44.828529" elapsed="0.013717"/>
+<status status="PASS" start="2025-10-05T15:14:36.196930" elapsed="0.016393"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${Url_register_succes}</arg>
 <arg>success</arg>
 <arg>Le compte n'a pas été créé avec succès</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-10-04T16:15:44.842643" elapsed="0.000588"/>
+<status status="PASS" start="2025-10-05T15:14:36.214148" elapsed="0.000469"/>
 </kw>
-<status status="PASS" start="2025-10-04T16:15:44.827583" elapsed="0.015860"/>
+<doc>vérifier que le compte est créé avec succès</doc>
+<status status="PASS" start="2025-10-05T15:14:36.196565" elapsed="0.018158"/>
 </kw>
-<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Setup_Teardown" type="TEARDOWN">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-10-04T16:15:45.022387" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-05T15:14:36.452197" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>selenium-screenshot-{index}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-10-04T16:15:44.845510" elapsed="0.177217"/>
+<status status="PASS" start="2025-10-05T15:14:36.216048" elapsed="0.236456"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-04T16:15:45.023280" elapsed="3.354124"/>
+<status status="PASS" start="2025-10-05T15:14:36.452971" elapsed="2.289016"/>
 </kw>
 <doc>Ferme le navigateur</doc>
-<status status="PASS" start="2025-10-04T16:15:44.844743" elapsed="3.533037"/>
+<status status="PASS" start="2025-10-05T15:14:36.215288" elapsed="2.526983"/>
 </kw>
 <doc>Test d'inscription d'un nouvel utilisateur</doc>
-<status status="PASS" start="2025-10-04T16:15:15.277072" elapsed="33.102508"/>
+<tag>RBF001</tag>
+<status status="PASS" start="2025-10-05T15:14:08.072401" elapsed="30.670347"/>
 </test>
-<status status="PASS" start="2025-10-04T16:15:14.792416" elapsed="33.589790"/>
+<status status="PASS" start="2025-10-05T15:14:07.634824" elapsed="31.109864"/>
+</suite>
+<status status="PASS" start="2025-10-05T15:14:07.633080" elapsed="31.114736"/>
+</suite>
+<status status="PASS" start="2025-10-05T15:14:07.593036" elapsed="31.156868"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">RBF001</stat>
 </tag>
 <suite>
-<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+<stat name="Test site e-com" id="s1" pass="1" fail="0" skip="0">Test site e-com</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Test site e-com.Tests</stat>
+<stat name="User story 1" id="s1-s1-s1" pass="1" fail="0" skip="0">Test site e-com.Tests.User story 1</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-10-04T16:15:15.275419" level="ERROR">Error in file 'C:\Users\allod\Desktop\Test site e-com\Test.robot' on line 4: Resource file '\\chemin-fihcier' does not exist.</msg>
 </errors>
 </robot>
