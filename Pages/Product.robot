@@ -5,7 +5,6 @@ Library    String
 **Variables***
 ${Url_search}  https://tutorialsninja.com/demo/index.php?route=product/search
 
-${name_product}  iMAC
 ${xpath_input_search}  //input[@id="input-search"]
 
 ***Keywords***

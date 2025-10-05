@@ -127,11 +127,9 @@ les mêmes produits sont affichés
         Page Should Contain    ${product}
     END
     
-
-
 il entre le nom du produit
 
-   Enter name product
+   Enter name product  iMac
 
 sélectionne sa catégorie
     [Documentation]   sélectionner la catégorie du produit 

@@ -1,201 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-10-05T17:25:58.354211" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-10-05T17:35:23.318077" rpa="false" schemaversion="5">
 <suite id="s1" name="Test site e-com" source="C:\Users\allod\Desktop\Test site e-com">
 <suite id="s1-s1" name="Tests" source="C:\Users\allod\Desktop\Test site e-com\Tests">
 <suite id="s1-s1-s1" name="User story 2" source="C:\Users\allod\Desktop\Test site e-com\Tests\User_story_2.robot">
 <test id="s1-s1-s1-t1" name="Vérifier l'affichage des produits recherchés avec la vue &quot;List&quot; et la vue &quot;Grid&quot;" line="61">
 <kw name="Open Chrome Browser" owner="Setup_Teardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:25:59.626412" level="INFO">Opening browser 'Chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
+<msg time="2025-10-05T17:35:23.749709" level="INFO">Opening browser 'Chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
 <arg>url=${Url}</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-05T17:25:59.625294" elapsed="6.077357"/>
+<status status="PASS" start="2025-10-05T17:35:23.749423" elapsed="5.454468"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-05T17:26:05.706271" elapsed="0.061457"/>
+<status status="PASS" start="2025-10-05T17:35:29.205376" elapsed="0.064396"/>
 </kw>
 <doc>Ouvre le site dans le navigateur Chrome</doc>
-<status status="PASS" start="2025-10-05T17:25:59.623403" elapsed="6.144679"/>
+<status status="PASS" start="2025-10-05T17:35:23.748865" elapsed="5.521258"/>
 </kw>
 <kw name="Given L'utilisateur a fait la recherche avec un nom de produit">
 <kw name="go to page search" owner="Product">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:05.770851" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=product/search'</msg>
+<msg time="2025-10-05T17:35:29.274570" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=product/search'</msg>
 <arg>${Url_search}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-10-05T17:26:05.770442" elapsed="0.474582"/>
+<status status="PASS" start="2025-10-05T17:35:29.273895" elapsed="0.457626"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-05T17:26:11.247245" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T17:35:34.733972" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-05T17:26:06.246129" elapsed="5.001492"/>
+<status status="PASS" start="2025-10-05T17:35:29.732669" elapsed="5.001617"/>
 </kw>
 <doc>aller vers la page de recherche</doc>
-<status status="PASS" start="2025-10-05T17:26:05.769896" elapsed="5.478070"/>
+<status status="PASS" start="2025-10-05T17:35:29.272905" elapsed="5.461696"/>
 </kw>
-<status status="PASS" start="2025-10-05T17:26:05.769142" elapsed="5.479035"/>
+<status status="PASS" start="2025-10-05T17:35:29.271486" elapsed="5.463261"/>
 </kw>
 <kw name="When il entre le nom du produit Mac">
 <kw name="Enter name product" owner="Product">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:11.256453" level="INFO">Typing text 'Mac' into text field '//input[@id="input-search"]'.</msg>
+<msg time="2025-10-05T17:35:34.738358" level="INFO">Typing text 'Mac' into text field '//input[@id="input-search"]'.</msg>
 <arg>locator=${xpath_input_search}</arg>
 <arg>text=${name_product}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-05T17:26:11.255037" elapsed="0.328672"/>
+<status status="PASS" start="2025-10-05T17:35:34.736971" elapsed="0.233626"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-05T17:26:16.585139" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T17:35:39.971998" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-05T17:26:11.584260" elapsed="5.001291"/>
+<status status="PASS" start="2025-10-05T17:35:34.971116" elapsed="5.001226"/>
 </kw>
 <arg>Mac</arg>
 <doc>saisir le nom du produit</doc>
-<status status="PASS" start="2025-10-05T17:26:11.253986" elapsed="5.331973"/>
+<status status="PASS" start="2025-10-05T17:35:34.736414" elapsed="5.236245"/>
 </kw>
 <kw name="Click in btn Search" owner="Product">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:16.589890" level="INFO">Clicking element '//input[@id='button-search']'.</msg>
+<msg time="2025-10-05T17:35:39.974662" level="INFO">Clicking element '//input[@id='button-search']'.</msg>
 <arg>locator=//input[@id='button-search']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-05T17:26:16.589207" elapsed="1.287017"/>
+<status status="PASS" start="2025-10-05T17:35:39.974058" elapsed="3.390598"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-05T17:26:22.877598" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T17:35:48.366344" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-05T17:26:17.876546" elapsed="5.001426"/>
+<status status="PASS" start="2025-10-05T17:35:43.365157" elapsed="5.001492"/>
 </kw>
 <doc>cliquer sur le bouton Search</doc>
-<status status="PASS" start="2025-10-05T17:26:16.587698" elapsed="6.290635"/>
+<status status="PASS" start="2025-10-05T17:35:39.973253" elapsed="8.393669"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-05T17:26:27.879398" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T17:35:53.368346" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-05T17:26:22.878720" elapsed="5.001057"/>
+<status status="PASS" start="2025-10-05T17:35:48.367294" elapsed="5.001268"/>
 </kw>
 <doc>saisir le nom du produit avec Var Mac</doc>
-<status status="PASS" start="2025-10-05T17:26:11.249234" elapsed="16.630843"/>
+<status status="PASS" start="2025-10-05T17:35:34.735690" elapsed="18.633063"/>
 </kw>
 <kw name="AND la page affiche les nombres de produits sous la vue &quot;Grid&quot;">
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:27.915810" level="INFO">Current page contains element 'xpath=//i[@class='fa fa-th']'.</msg>
+<msg time="2025-10-05T17:35:53.397625" level="INFO">Current page contains element 'xpath=//i[@class='fa fa-th']'.</msg>
 <arg>xpath=//i[@class='fa fa-th']</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-10-05T17:26:27.882213" elapsed="0.033937"/>
+<status status="PASS" start="2025-10-05T17:35:53.370144" elapsed="0.027661"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-05T17:26:32.921025" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T17:35:58.399164" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-05T17:26:27.916661" elapsed="5.004777"/>
+<status status="PASS" start="2025-10-05T17:35:53.398108" elapsed="5.001382"/>
 </kw>
 <doc>vérifier que la page affiche les nombres de produits sous la vue "Grid"</doc>
-<status status="PASS" start="2025-10-05T17:26:27.881317" elapsed="5.040503"/>
+<status status="PASS" start="2025-10-05T17:35:53.369521" elapsed="5.030243"/>
 </kw>
 <kw name="When il modifie la vue d'affichage des produits affichés pour la vue &quot;List&quot;">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:32.924468" level="INFO">Clicking element 'xpath=//i[@class='fa fa-th-list']'.</msg>
+<msg time="2025-10-05T17:35:58.402181" level="INFO">Clicking element 'xpath=//i[@class='fa fa-th-list']'.</msg>
 <arg>xpath=//i[@class='fa fa-th-list']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-05T17:26:32.923895" elapsed="0.191977"/>
+<status status="PASS" start="2025-10-05T17:35:58.401691" elapsed="0.160100"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-05T17:26:38.117584" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-10-05T17:36:03.564138" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-05T17:26:33.116445" elapsed="5.001369"/>
+<status status="PASS" start="2025-10-05T17:35:58.562103" elapsed="5.002352"/>
 </kw>
 <doc>modifier la vue d'affichage des produits affichés pour la vue "List"</doc>
-<status status="PASS" start="2025-10-05T17:26:32.923018" elapsed="5.194998"/>
+<status status="PASS" start="2025-10-05T17:35:58.401006" elapsed="5.163953"/>
 </kw>
 <kw name="Then les mêmes produits sont affichés">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-10-05T17:26:38.119788" level="INFO">@{EXPECTED_PRODUCTS} = [ iMac | MacBook | MacBook Air | MacBook Pro ]</msg>
+<msg time="2025-10-05T17:36:03.567840" level="INFO">@{EXPECTED_PRODUCTS} = [ iMac | MacBook | MacBook Air | MacBook Pro ]</msg>
 <var>@{EXPECTED_PRODUCTS}</var>
 <arg>iMac</arg>
 <arg>MacBook</arg>
 <arg>MacBook Air</arg>
 <arg>MacBook Pro</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-10-05T17:26:38.119457" elapsed="0.000384"/>
+<status status="PASS" start="2025-10-05T17:36:03.567116" elapsed="0.000824"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:38.158442" level="INFO">Current page contains text 'iMac'.</msg>
+<msg time="2025-10-05T17:36:03.606831" level="INFO">Current page contains text 'iMac'.</msg>
 <arg>${product}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-10-05T17:26:38.120564" elapsed="0.038185"/>
+<status status="PASS" start="2025-10-05T17:36:03.569552" elapsed="0.037597"/>
 </kw>
 <var name="${product}">iMac</var>
-<status status="PASS" start="2025-10-05T17:26:38.120381" elapsed="0.038587"/>
+<status status="PASS" start="2025-10-05T17:36:03.569093" elapsed="0.038282"/>
 </iter>
 <iter>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:38.197278" level="INFO">Current page contains text 'MacBook'.</msg>
+<msg time="2025-10-05T17:36:03.644646" level="INFO">Current page contains text 'MacBook'.</msg>
 <arg>${product}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-10-05T17:26:38.160002" elapsed="0.037595"/>
+<status status="PASS" start="2025-10-05T17:36:03.608239" elapsed="0.036670"/>
 </kw>
 <var name="${product}">MacBook</var>
-<status status="PASS" start="2025-10-05T17:26:38.159584" elapsed="0.038230"/>
+<status status="PASS" start="2025-10-05T17:36:03.607835" elapsed="0.037270"/>
 </iter>
 <iter>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:38.235100" level="INFO">Current page contains text 'MacBook Air'.</msg>
+<msg time="2025-10-05T17:36:03.677041" level="INFO">Current page contains text 'MacBook Air'.</msg>
 <arg>${product}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-10-05T17:26:38.198678" elapsed="0.036708"/>
+<status status="PASS" start="2025-10-05T17:36:03.645851" elapsed="0.031452"/>
 </kw>
 <var name="${product}">MacBook Air</var>
-<status status="PASS" start="2025-10-05T17:26:38.198276" elapsed="0.037318"/>
+<status status="PASS" start="2025-10-05T17:36:03.645538" elapsed="0.031997"/>
 </iter>
 <iter>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:38.272491" level="INFO">Current page contains text 'MacBook Pro'.</msg>
+<msg time="2025-10-05T17:36:03.713109" level="INFO">Current page contains text 'MacBook Pro'.</msg>
 <arg>${product}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-10-05T17:26:38.236438" elapsed="0.036276"/>
+<status status="PASS" start="2025-10-05T17:36:03.678319" elapsed="0.035057"/>
 </kw>
 <var name="${product}">MacBook Pro</var>
-<status status="PASS" start="2025-10-05T17:26:38.236046" elapsed="0.036856"/>
+<status status="PASS" start="2025-10-05T17:36:03.677922" elapsed="0.035642"/>
 </iter>
 <var>${product}</var>
 <value>@{EXPECTED_PRODUCTS}</value>
-<status status="PASS" start="2025-10-05T17:26:38.120022" elapsed="0.153037"/>
+<status status="PASS" start="2025-10-05T17:36:03.568211" elapsed="0.145508"/>
 </for>
 <doc>Vérifie que tous les produits attendus sont toujours visibles</doc>
-<status status="PASS" start="2025-10-05T17:26:38.118969" elapsed="0.154355"/>
+<status status="PASS" start="2025-10-05T17:36:03.566155" elapsed="0.147896"/>
 </kw>
 <kw name="Close Browser" owner="Setup_Teardown" type="TEARDOWN">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-10-05T17:26:38.474553" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-05T17:36:03.857319" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>selenium-screenshot-{index}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-10-05T17:26:38.275321" elapsed="0.199595"/>
+<status status="PASS" start="2025-10-05T17:36:03.716128" elapsed="0.141448"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-05T17:26:38.475233" elapsed="2.526356"/>
+<status status="PASS" start="2025-10-05T17:36:03.858038" elapsed="2.280497"/>
 </kw>
 <doc>Ferme le navigateur</doc>
-<status status="PASS" start="2025-10-05T17:26:38.274351" elapsed="2.727547"/>
+<status status="PASS" start="2025-10-05T17:36:03.715336" elapsed="2.423405"/>
 </kw>
 <doc>Test de l'affichage des produits recherchés avec la vue "List" et la vue "Grid"</doc>
 <tag>RBF007</tag>
-<status status="PASS" start="2025-10-05T17:25:59.620796" elapsed="41.381634"/>
+<status status="PASS" start="2025-10-05T17:35:23.747880" elapsed="42.391252"/>
 </test>
-<status status="PASS" start="2025-10-05T17:25:58.470264" elapsed="42.534657"/>
+<status status="PASS" start="2025-10-05T17:35:23.357813" elapsed="42.782672"/>
 </suite>
-<status status="PASS" start="2025-10-05T17:25:58.464425" elapsed="42.543877"/>
+<status status="PASS" start="2025-10-05T17:35:23.355509" elapsed="42.786561"/>
 </suite>
-<status status="PASS" start="2025-10-05T17:25:58.358951" elapsed="42.652334"/>
+<status status="PASS" start="2025-10-05T17:35:23.320070" elapsed="42.823486"/>
 </suite>
 <statistics>
 <total>
